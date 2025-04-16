@@ -1,0 +1,78 @@
+# Explicación del Portafolio
+
+Este documento explica dónde se encuentran los elementos solicitados en el proyecto y proporciona recomendaciones para mejorar la velocidad de carga.
+
+## Estructura HTML
+
+### Etiquetas Semánticas
+
+Las etiquetas semánticas se utilizan en todos los archivos HTML del proyecto:
+
+- **`<header>`**: Presente en todos los archivos HTML (index.html, about.html, projects.html, social.html) en las líneas 10-22 aproximadamente. Contiene el logo y la navegación.
+- **`<nav>`**: Dentro del header en todos los archivos HTML, líneas 11-21, contiene el menú de navegación.
+- **`<section>`**: Utilizado para dividir el contenido en áreas temáticas en todos los archivos HTML:
+  - En index.html: línea 28 (sección hero)
+  - En about.html: línea 29 (sección de contenido sobre mí)
+  - En projects.html: línea 29 (sección de proyectos)
+  - En social.html: línea 29 (sección de redes sociales)
+- **`<footer>`**: Presente al final de todos los archivos HTML, contiene información de copyright.
+
+### Contenido Inicial
+
+Cada página contiene contenido inicial específico:
+
+- **index.html**: Página de inicio con una sección hero que incluye un título, texto descriptivo y un botón de llamada a la acción.
+- **about.html**: Información personal, foto de perfil y sección de habilidades con barras de progreso.
+- **projects.html**: Cuadrícula de proyectos con imágenes, descripciones y etiquetas de tecnologías.
+- **social.html**: Enlaces a redes sociales con iconos y descripciones.
+
+## Estilos con CSS
+
+### Paleta de Colores y Tipografías
+
+Definidos en el archivo **css/styles.css**:
+
+- **Paleta de colores**: Definida mediante variables CSS en las líneas 2-8:
+  ```css
+  :root {
+      --primary-color: #3498db;
+      --secondary-color: #2c3e50;
+      --accent-color: #e74c3c;
+      --light-color: #ecf0f1;
+      --dark-color: #2c3e50;
+      --text-color: #333;
+  }
+  ```
+
+- **Tipografía**: Definida en la línea 19:
+  ```css
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  ```
+
+### Diseño Responsivo
+
+- **Flexbox**: Utilizado en múltiples elementos:
+  - Navegación (líneas 44-47)
+  - Menú de navegación (líneas 52-55)
+  - Sección hero (líneas 77-82)
+  - Etiquetas de proyectos (líneas 293-297)
+
+- **Grid Layout**: Implementado para estructuras más complejas:
+  - Sección "Acerca de mí" (líneas 226-230)
+  - Cuadrícula de proyectos (líneas 267-271)
+  - Cuadrícula de redes sociales (líneas 317-321)
+
+- **Media Queries**: Implementados para adaptación a dispositivos móviles:
+  - Líneas 146-199: Ajustes para pantallas menores a 768px
+  - Líneas 347-354: Ajustes específicos para secciones de contenido en móviles
+
+## Interactividad con JavaScript
+
+El archivo **js/script.js** contiene toda la interactividad:
+
+- **Menú desplegable móvil**: Líneas 7-19, toggle del menú al hacer clic en el icono de hamburguesa.
+- **Cierre automático del menú**: Líneas 22-31, cierra el menú al hacer clic en un enlace.
+- **Desplazamiento suave**: Líneas 34-48, animación de scroll suave para enlaces internos.
+- **Animaciones al hacer scroll**: Líneas 51-65, elementos con la clase `.animate-on-scroll` se animan cuando aparecen en el viewport.
+- **Efecto de escritura (typing)**: Líneas 68-85, efecto de escritura para el texto de bienvenida en la página de inicio.
+
